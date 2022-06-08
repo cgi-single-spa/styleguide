@@ -1,4 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { defineCustomElement } from 'vue';
+import './global.css'
 
-createApp(App).mount('#app')
+import { default as HelloWorld } from './components/HelloWorld.ce.vue';
+
+
+const HelloWorldCE = defineCustomElement(HelloWorld);
+
+export function register() {
+  customElements.define('hello-world', HelloWorldCE);
+}
