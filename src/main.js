@@ -1,5 +1,5 @@
+import './global.css';
 import { defineCustomElement } from 'vue';
-import './global.css'
 
 import { default as HelloWorld } from './components/HelloWorld.ce.vue';
 
