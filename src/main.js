@@ -1,11 +1,11 @@
 import './global.css';
 import { defineCustomElement } from 'vue';
 
-import { default as HelloWorld } from './components/HelloWorld.ce.vue';
+import { default as badgeButton } from './components/BadgeButton.ce.vue';
+import { default as starRating } from './components/StarRating.ce.vue';
 
+const BadgeButton = defineCustomElement(badgeButton);
+const StarRating = defineCustomElement(starRating);
 
-const HelloWorldCE = defineCustomElement(HelloWorld);
-
-export function register() {
-  customElements.define('hello-world', HelloWorldCE);
-}
+customElements.define('star-rating', StarRating);
+customElements.define('badge-button', BadgeButton);
